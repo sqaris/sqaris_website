@@ -1,17 +1,14 @@
 // App.jsx
-import './App.css';
-import AboutPage from './components/elements/AboutPage';
+import "./App.css";
+import AboutPage from "./components/elements/AboutPage";
 import Footer from "./components/elements/Footer";
-import Career from "./components/pages/Career";
-import Contact from "./components/pages/Contact";
-import Services from "./components/pages/Services";
-import TeamCards from './components/pages/TeamCards';
-import About from "./components/pages/TeamCards";
-import HomePage from './page/HomePage';
-import HomePageBelow from './page/HomePageBelow';
-
-
-
+import Career from "./page/Career";
+import Contact from "./page/Contact";
+import Services from "./page/Services";
+import TeamCards from "./page/TeamCards";
+import About from "./page/TeamCards";
+import HomePage from "./page/HomePage";
+import HomePageBelow from "./page/HomePageBelow";
 
 function App() {
   return (
@@ -49,11 +46,9 @@ function App() {
         </div>
         <Footer />
       </>
-
     </>
     // <CarrerNew/>
   );
 }
-
 
 export default App;

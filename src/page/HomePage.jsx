@@ -1,20 +1,20 @@
-import React from 'react';
+import React from "react";
 // import logo from '../../../src/assets/Sqaris_logo.svg';
-import NavBar from '../components/NavBar';
+import NavBar from "../components/elements/NavBar";
 // import heroText from '../../assets/heroText.svg';
 // import bodyText from '../../assets/bodyText.svg';
 // import scrollIcon from '../../assets/scrollIcon.svg';
 // import bgImage from '../../assets/Hero.png';
-import logo from '../assets/Sqaris_logo.svg';
-import heroText from '../assets/HeroText.svg';
-import bodyText from '../assets/BodyText.svg';
-import scrollIcon from '../assets/ScrollIcon.svg';
-import bgImage from '../assets/Hero.png';
+import logo from "../assets/Sqaris_logo.svg";
+import heroText from "../assets/HeroText.svg";
+import bodyText from "../assets/BodyText.svg";
+import scrollIcon from "../assets/ScrollIcon.svg";
+import bgImage from "../assets/Hero.png";
 
 function HomePage() {
   return (
     <div
-      className="relative w-full h-screen bg-cover bg-center"
+      className="relative w-full h-screen bg-cover bg-center overflow-hidden"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       {/* Logo */}
@@ -37,7 +37,9 @@ function HomePage() {
 
       {/* Scroll down */}
       <div className="absolute bottom-[42px] left-1/2 -translate-x-1/2 text-center z-20">
-        <h3 className="text-white text-[12px] font-medium tracking-[5px]">SCROLL DOWN</h3>
+        <h3 className="text-white text-[12px] font-medium tracking-[5px]">
+          SCROLL DOWN
+        </h3>
         <img
           src={scrollIcon}
           alt="Scroll Icon"

@@ -17,7 +17,7 @@ import { FaFacebook, FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white px-6 py-12 w-full">
+    <footer className="bg-black text-white  px-6 py-12 w-full">
       <div className="max-w-7xl mx-auto">
         {/* UPDATED: Grid layout changed for better mobile responsiveness */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 text-sm">
