@@ -9,8 +9,8 @@ import profileimg from "../../assets/image/profileimg.png"
 
 export function InfiniteMovingCardsElement() {
   return (
-    <div className="md:h-[700px] h-[400px]  md:py-8 flex flex-col antialiased bg-white dark:bg-black  items-center justify-center relative overflow-hidden">
-      <h1 className="text-transparent bg-clip-text bg-gradient-to-br to-white from-[#8C45FF] text-center font-bold text-[72px] leading-[72px] font-raleway mt-50 mb-10">
+    <div className="  py-8  flex flex-col antialiased bg-white dark:bg-black  items-center justify-center relative overflow-hidden">
+      <h1 className="text-transparent text-4xl md:text-6xl lg:text-6xl bg-clip-text bg-gradient-to-br to-white from-[#8C45FF] text-center font-bold  leading-[72px] font-raleway mt-50 mb-10">
           OUR TEAM
         </h1>
       <InfiniteMovingCards items={team} direction="left" speed="slow" />

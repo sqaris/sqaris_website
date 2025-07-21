@@ -69,10 +69,10 @@ export const InfiniteMovingCards = ({
                 className="w-full h-full object-cover rounded-2xl"
               />
             </div>
-            <div className="text-center text-white my-4 text-[30px] font-raleway font-bold">
+            <div className="text-center text-white my-4 md:my-4 md:text-3xl text-xl font-raleway md:font-bold">
               {item.name}
             </div>
-            <div className="text-center text-white my-2 text-24 font-raleway">
+            <div className="text-center text-white my-2 md:text-lg text-md font-raleway">
               {item.designation}
             </div>
           </li>
