@@ -46,7 +46,7 @@ export default AboutPage;
 // ✅ Card Component
 function Card({ title, content }) {
   return (
-    <div className="relative h-[200px] w-[984px] opacity-70">
+    <div className="relative h-[200px] w-full opacity-70">
       <div className="absolute inset-0 border border-purple-500 rounded-[28px] backdrop-blur-sm">
         <div className="absolute inset-0 overflow-hidden rounded-[28px]">
           <div
@@ -72,13 +72,13 @@ function Card({ title, content }) {
 
 function OurStory() {
   return (
-    <div className="relative mx-auto mt-10" style={{ width: '1320px', height: '448px' }}>
+    <div className="relative mx-auto my-6 mt-10 w-full" >
       {/* Sphere positioned at bottom right corner */}
-      <div className="absolute -bottom-16 -right-28 z-30">
+      <div className="absolute -bottom-16 md:-right-28 -right-5 z-30">
         <img
           src={sphere}
           alt="3D Sphere"
-          className="w-[280px] h-[280px] object-contain"
+          className="md:w-[280px] md:h-[280px] w-[100px] h-[100px] object-contain"
           style={{ filter: 'brightness(0.8) contrast(1.2)' }}
         />
       </div>
