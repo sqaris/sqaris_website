@@ -29,7 +29,7 @@ export const InfiniteMovingCards = ({
 
       let duration = "20s";
       if (speed === "fast") duration = "10s";
-      else if (speed === "slow") duration = "30s";
+      else if (speed === "slow") duration = "60s";
 
       containerRef.current.style.setProperty("--animation-duration", duration);
       setStart(true);

@@ -1,9 +1,7 @@
+import SqarisMissionVision from "../elements/AboutPage.jsx";
 import HomeLanding from "../elements/HomeLanding.jsx";
-import React from "react";
-import LandingBelow from "../elements/LandingBelow.jsx";
 import { InfiniteMovingCardsElement } from "../elements/InfinteMovingCardsElement.jsx";
-import SqarisMissionVision from "../elements/MissionVisioncard.jsx";
-import CeoProfileCard from "../elements/ProfileCard.jsx";
+import LandingBelow from "../elements/LandingBelow.jsx";
 
 const Home = () => {
   return (

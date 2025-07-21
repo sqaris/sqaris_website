@@ -4,9 +4,9 @@ import Mission from "../elements/Mission.jsx";
 import OurStory from "../elements/OurStory.jsx";
 import { InfiniteMovingCardsElement } from "../elements/InfinteMovingCardsElement.jsx";
 
-const About = () => {
+const TeamCards = () => {
   return (
-    <section id="about" className="lg:pt-24 bg-black">
+    <section id="about" className="lg:pt-24 bg-black mt-30">
       
       {/* <AboutHead />
       <Mission />
@@ -16,4 +16,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default TeamCards;

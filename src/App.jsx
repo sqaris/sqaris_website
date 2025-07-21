@@ -1,19 +1,14 @@
 // App.jsx
-import './App.css'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/elements/NavBar";
+import './App.css';
+import AboutPage from './components/elements/AboutPage';
 import Footer from "./components/elements/Footer";
-import Home from "./components/pages/Home";
-import About from "./components/pages/About";
-import Services from "./components/pages/Services";
-import Contact from "./components/pages/Contact";
 import Career from "./components/pages/Career";
-import JobApplicationForm from "./components/elements/JobApplicationForm";
-import CarrerNew from './components/elements/CarrerNew';
+import Contact from "./components/pages/Contact";
+import Services from "./components/pages/Services";
+import TeamCards from './components/pages/TeamCards';
+import About from "./components/pages/TeamCards";
 import HomePage from './page/HomePage';
 import HomePageBelow from './page/HomePageBelow';
-import AboutHead from './components/elements/AboutHead';
-import MissionVisionCard from './components/elements/MissionVisioncard';
 
 
 
@@ -36,11 +31,15 @@ function App() {
     <>
       <HomePage />
       <HomePageBelow />
-      <MissionVisionCard/>
-      <About/>
+      <AboutPage/>
+      <TeamCards/>
       {/* our services */}
+      <Services/>
+      <Career/>
+      <Contact/>
+      <Footer/>
       {/* our projects */}
-      <CarrerNew/>
+      {/* <CarrerNew/> */}
     </>
     // <CarrerNew/>
   );
