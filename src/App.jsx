@@ -29,17 +29,27 @@ function App() {
     // <Footer/>
     // </Router>
     <>
-      <HomePage />
-      <HomePageBelow />
-      <AboutPage/>
-      <TeamCards/>
-      {/* our services */}
-      <Services/>
-      <Career/>
-      <Contact/>
-      <Footer/>
-      {/* our projects */}
-      {/* <CarrerNew/> */}
+      <>
+        <div id="home">
+          <HomePage />
+        </div>
+        <HomePageBelow />
+        <div id="about">
+          <AboutPage />
+          <TeamCards />
+        </div>
+        <div id="services">
+          <Services />
+        </div>
+        <div id="career">
+          <Career />
+        </div>
+        <div id="contact">
+          <Contact />
+        </div>
+        <Footer />
+      </>
+
     </>
     // <CarrerNew/>
   );

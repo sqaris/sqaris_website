@@ -7,7 +7,7 @@ const AboutPage = () => {
   return (
     <div
       id="about"
-      className="relative w-full min-h-[40rem] bg-cover bg-center mt-20 "
+      className="relative w-full min-h-[40rem] bg-cover bg-center mt-20"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className="flex-col justify-center">
@@ -18,20 +18,24 @@ const AboutPage = () => {
           Who is SQARIS?
         </h2>
         <p className="text-[#898989] text-center font-normal text-[24px] leading-[38.83px] font-raleway max-w-[1320px] mx-auto px-4 my-20">
-          We’re not your typical AI company that promises to revolutionize everything and then delivers a chatbot that can’t understand sarcasm. At Sqaris, we build artificial intelligence that’s actually intelligent — intuitive platforms powered by machine learning and large language models that solve real problems, not just impressive demos.
+          We're not your typical AI company that promises to revolutionize everything and then delivers a chatbot that can't understand sarcasm. At Sqaris, we build artificial intelligence that's actually intelligent — intuitive platforms powered by machine learning and large language models that solve real problems, not just impressive demos.
         </p>
       </div>
-
+      
       <div className="flex flex-col items-center justify-center bg-black my-1">
         {/* Mission */}
-        <Card title="Mission" content="Empowering industries with intelligent AI platforms and robotics system through engineering excellence." />
-
+        <Card 
+          title="Mission" 
+          content="Empowering industries with intelligent AI platforms and robotics system through engineering excellence." 
+        />
         <div className="h-10" />
-
         {/* Vision */}
-        <Card title="Vision" content="While SQARIS currently operates in select regions, we are actively expanding our reach. Our goal is to deliver intelligent, accessible, and responsible AI experiences to users across the globe." />
+        <Card 
+          title="Vision" 
+          content="While SQARIS currently operates in select regions, we are actively expanding our reach. Our goal is to deliver intelligent, accessible, and responsible AI experiences to users across the globe." 
+        />
       </div>
-
+      
       <OurStory />
     </div>
   );
@@ -69,16 +73,18 @@ function Card({ title, content }) {
 function OurStory() {
   return (
     <div className="relative mx-auto mt-10" style={{ width: '1320px', height: '448px' }}>
-      <div className="absolute -bottom-16 -right-16 z-30">
+      {/* Sphere positioned at bottom right corner */}
+      <div className="absolute -bottom-16 -right-28 z-30">
         <img
           src={sphere}
           alt="3D Sphere"
-          className="w-[260px] h-[260px] object-contain"
+          className="w-[280px] h-[280px] object-contain"
           style={{ filter: 'brightness(0.8) contrast(1.2)' }}
         />
       </div>
-
-      <div className="relative h-full w-full rounded-3xl border border-white/10 px-16 py-12 overflow-hidden flex-col items-center justify-center">
+      
+      <div className="relative h-full w-[full] rounded-3xl border border-white/10 px-16 py-12 overflow-hidden flex flex-col items-center justify-center">
+        {/* Background gradient effect */}
         <div
           className="absolute bg-purple-500/10 rounded-full blur-3xl"
           style={{
@@ -88,31 +94,27 @@ function OurStory() {
             top: '-361px',
             filter: 'blur(200px)',
           }}
-        ></div>
-
-        <div className="absolute flex flex-col gap-6 items-center" style={{ width: '1192px', left: '64px', top: '38px' }}>
-          <div className="flex flex-col gap-1 items-center w-36">
-            <img src={book} alt="Our Story Icon" />
-            <div className="text-white text-center font-bold text-3xl font-raleway">Our story</div>
+        />
+        
+        {/* Content container */}
+        <div className="relative flex flex-col gap-8 items-center justify-center max-w-5xl">
+          {/* Header section */}
+          <div className="flex flex-col gap-4 items-center">
+            <img src={book} alt="Our Story Icon" className="w-16 h-16" />
+            <h2 className="text-white text-center font-bold text-3xl font-raleway">
+              Our story
+            </h2>
           </div>
-
-          <div
-            className="text-center font-normal font-raleway"
-            style={{
-              color: '#898989',
-              fontSize: '24px',
-              lineHeight: '38.83px',
-            }}
-          >
-            Established in 2024 by the innovative engineer Gokul Gopalan, SQARIS is transforming the software landscape with AI and ML.
-            <br />
-            What started as a small, innovation-focused team has evolved into a powerful entity developing intelligent, scalable solutions —
-            <br />
-            ranging from social care applications to LLM-driven platforms. At SQARIS, we combine precise engineering with ethical AI to create
-            <br />
-            technology that is smarter, more interconnected, and centered around human needs.
-            <br />
-            Become a part of our mission to shape an intelligent future.
+          
+          {/* Description text - flowing paragraph */}
+          <div className="text-center font-normal font-raleway max-w-4xl">
+            <p className="text-[#898989] text-xl leading-[32px] mb-4">
+              Established in 2024 by the innovative engineer Gokul Gopalan, SQARIS is transforming the software 
+              landscape with AI and ML. What started as a small, innovation-focused team has evolved into a 
+              powerful entity developing intelligent, scalable solutions — ranging from social care applications 
+              to LLM-driven platforms. At SQARIS, we combine precise engineering with ethical AI to create 
+              technology that is smarter, more interconnected, and centered around human needs.Become a part of our mission to shape an intelligent future.
+            </p>
           </div>
         </div>
       </div>

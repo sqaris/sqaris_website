@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 // Make sure to install react-icons: npm install react-icons
 import { FaLocationDot, FaPhone, FaEnvelope } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
+import mapImage from '../../assets/image/map.svg';
 
 // STEP 1: Import your background image
 import contactBoxBg from '../../assets/image/contact/contact_box_bg.png';
@@ -165,7 +166,7 @@ return (
             <InfoItem icon={<FaWhatsapp />} title="Whatsapp" text="+91 9539 378 327" />
         </div>
         <div className="w-full h-64 rounded-xl overflow-hidden border border-[rgba(159,85,255,0.2)]">
-            <img src="https://i.ibb.co/6y40F2r/thrissur-map.png" alt="Map of Thrissur, Kerala" className="w-full h-full object-cover grayscale invert brightness-75" />
+            <img src={mapImage} alt="Map of Thrissur, Kerala" className="w-full h-full object-cover grayscale invert brightness-75" />
         </div>
         </div>
     </div>
