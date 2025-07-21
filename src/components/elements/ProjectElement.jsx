@@ -91,10 +91,10 @@ const ProjectElement = () => {
 
   return (
     <section className="mx-auto px-4 py-20 w-full text-white">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Header */}
         <h1
-          className="text-center text-4xl md:text-5xl font-bold uppercase tracking-wider mb-16"
+          className="text-center text-4xl md:text-5xl font-bold bg-gradient-to-b from-purple-300 to-purple-500 bg-clip-text text-transparent uppercase tracking-wider mb-16"
           style={{ textShadow: "0 0 15px rgba(190, 151, 254, 0.3)" }}
         >
           Our Projects

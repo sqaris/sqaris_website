@@ -8,7 +8,7 @@ import BgImage from '../assets/sub_hero.png';
 function HomePageBelow() {
   return (
     <div
-      className="min-h-screen w-full flex flex-col justify-center overflow-hidden items-center px-5 py-10
+      className="min-h-screen w-full flex flex-col justify-center  items-center px-5 py-10
                  bg-center bg-no-repeat bg-cover"
       style={{ backgroundImage: `url(${BgImage})` }}
     >

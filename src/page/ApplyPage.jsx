@@ -5,7 +5,7 @@ import JobApplicationForm from "../elements/JobApplicationForm";
 
 const ApplyPage = () => {
   return (
-    <section className="bg-black  overflow-hidden">
+    <section className="bg-black  ">
       <Navbar />
       <JobApplicationForm />
       <Footer />

@@ -7,7 +7,7 @@ const AboutPage = () => {
   return (
     <div
       id="about"
-      className="relative w-full min-h-[40rem] bg-cover bg-center mt-20"
+      className="relative overflow-hidden py-8 w-full min-h-[40rem] bg-cover bg-center mt-20"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className="flex-col justify-center">

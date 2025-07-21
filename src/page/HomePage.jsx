@@ -14,7 +14,7 @@ import bgImage from "../assets/Hero.png";
 function HomePage() {
   return (
     <div
-      className="relative w-full h-screen bg-cover bg-center overflow-hidden"
+      className="relative w-full h-screen bg-cover bg-center "
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       {/* Logo */}
