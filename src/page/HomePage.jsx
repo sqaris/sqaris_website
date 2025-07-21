@@ -1,102 +1,107 @@
-import React, { useState } from 'react';
-import logo from '../assets/Sqaris_logo.svg';
-import heroText from '../assets/HeroText.svg';
-import bodyText from '../assets/BodyText.svg';
-import scrollIcon from '../assets/ScrollIcon.svg';
-import bgImage from '../assets/Hero.png';
-import { Menu, X } from 'lucide-react';
+"use client";
+
+import React from 'react';
 import { motion } from 'framer-motion';
 
-function HomePage() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const menuItems = ['Home', 'About', 'Services', 'Career', 'Contact'];
-
+// STEP 1: Import your images here
+ import logo from '../assets/Sqaris_logo.svg';
+import star from '../assets/image/home/holo-star.png';
+import Tophand from '../assets/image/home/upper_blue_hand.png';
+import bottomhand from '../assets/image/home/lower_white_hand.png';
+import bg from "../assets/image/home/bg_home.png";
+const HomePage = () => {
   return (
-    <div
-      className="relative w-full h-screen bg-cover bg-no-repeat bg-top md:bg-center"
-      style={{ backgroundImage: `url(${bgImage})` }}
-    >
-      {/* Logo */}
-      <img
-        src={logo}
-        alt="Logo"
-        className="absolute top-6 left-6 w-[55px] md:w-[70px] h-auto z-40"
-      />
+    <div className="relative w-full h-screen bg-black text-white overflow-hidden bg-cover"      style={{
+            backgroundImage: `url(${bg})`,
+          }}>
+        {/* Background Gradient and Grid */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#100F13] to-[#241a3d] -z-20"></div>
+        <div 
+            className="absolute inset-0 -z-10"
+            style={{
+            backgroundImage:
+                `linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px)`,
+            backgroundSize: '50px 50px',
+            }}
+        ></div>
 
-      {/* Desktop NavBar */}
-      <nav className="hidden md:flex absolute top-[20px] left-1/2 -translate-x-1/2 z-30 
-                      items-center justify-center px-10 py-6 rounded-[48px] border border-white/30 
-                      backdrop-blur-lg bg-white/10 gap-10 text-white text-lg font-medium">
-        {menuItems.map((item) => (
-          <a
-            key={item}
-            href={`#${item.toLowerCase()}`}
-            className="hover:text-white/80 transition"
-          >
-            {item}
-          </a>
-        ))}
-      </nav>
-
-      {/* Mobile Menu Icon */}
-      <div className="md:hidden absolute top-6 right-6 z-40">
-        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-          {isMobileMenuOpen ? (
-            <X className="text-white w-8 h-8" />
-          ) : (
-            <Menu className="text-white w-8 h-8" />
-          )}
-        </button>
-      </div>
-
-      {/* Mobile Top Dropdown Menu */}
-      {isMobileMenuOpen && (
-  <motion.div
-    initial={{ opacity: 0, y: -10 }}
-    animate={{ opacity: 1, y: 0 }}
-    exit={{ opacity: 0 }}
-    transition={{ duration: 0.2 }}
-    className="absolute top-[70px] w-full flex justify-center z-30"
-  >
-    <div className="w-64 p-6 rounded-[24px] border border-white/20 bg-white/10 backdrop-blur-xl shadow-xl">
-      <ul className="space-y-4 text-lg font-semibold text-white text-center">
-        {menuItems.map((item) => (
-          <li key={item}>
-            <a
-              href={`#${item.toLowerCase()}`}
-              className="hover:text-white/80 transition"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {item}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </motion.div>
-)}
-
-
-      {/* Hero Content */}
-      <div className="absolute left-6 right-6 md:left-[110px] top-1/2 -translate-y-1/2 flex flex-col gap-6 z-20">
-        <img src={heroText} alt="Hero Text" className="w-full max-w-[550px]" />
-        <img src={bodyText} alt="Body Text" className="w-full max-w-[530px]" />
-      </div>
-
-      {/* Scroll down */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-center z-20">
-        <h3 className="text-white text-[12px] font-medium tracking-[5px]">
-          SCROLL DOWN
-        </h3>
-        <img
-          src={scrollIcon}
-          alt="Scroll Icon"
-          className="w-[18px] h-[18px] mt-2 mx-auto opacity-90"
+        {/* Logo */}
+        <motion.img
+            src={logo}
+            alt="Logo"
+            className="absolute top-6 left-6  sm:top-8 sm:left-8 w-10 sm:w-12 z-30"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
         />
-      </div>
+
+        {/* Main Content */}
+        <div className="relative mx-auto px-6 sm:px-8 h-full flex items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full lg:pl-12">
+
+                {/* Left Text Content */}
+                <motion.div 
+                    className="z-20"
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                >
+                    <h1 className="text-3xl sm:text-5xl md:text-7xl  font-bold leading-tight text-gray-300">
+                        Where application <br /> meets{' '}
+                        <span className="text-purple-400">
+                            Intelligence.
+                        </span>
+                    </h1>
+                    <p className="mt-6 text-gray-400 max-w-md text-xs sm:text-base">
+                        We don't just build software — we architect the future. SQARIS leads the AI revolution with intelligent systems that redefine human-machine collaboration. Our machine learning platforms power next-generation digital experiences at global scale.
+                    </p>
+                </motion.div>
+
+                {/* Right Visuals Container - This is for positioning and will be hidden on mobile */}
+                <div className="absolute inset-0  w-full h-full z-10">
+                    <motion.img
+                        src={Tophand}
+                        alt="Top Hand"
+                        className="absolute top-5 md:-top-12  right-0  w-1/2 max-w-xs "
+                        initial={{ opacity: 0, y: -50, x: 50 }}
+                        animate={{ opacity: 1, y: 0, x: 0 }}
+                        transition={{ duration: 1, delay: 0.4 }}
+                    />
+                    <motion.img
+                        src={star}
+                        alt="Star"
+                        className="absolute md:top-1/2 md:left-3/4 hidden md:block -translate-x-1/4 -translate-y-1/2 w-16 h-16 sm:w-20 sm:h-20"
+                        initial={{ opacity: 0, scale: 0.5 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.8, delay: 0.8 }}
+                        whileHover={{ scale: 1.2, rotate: 45 }}
+                    />
+                    <motion.img
+                        src={bottomhand}
+                        alt="Bottom Hand"
+                        className="absolute -bottom-8  right-16 md:right-40  w-full max-w-sm md:max-w-md lg:max-w-lg"
+                        initial={{ opacity: 0, y: 50, x: 50 }}
+                        animate={{ opacity: 1, y: 0, x: 0 }}
+                        transition={{ duration: 1, delay: 0.6 }}
+                    />
+                </div>
+            </div>
+        </div>
+
+        {/* Scroll Down Indicator */}
+        <motion.div 
+            className="absolute bottom-8 left-1/2 -translate-x-1/2 text-center z-20"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1.2 }}
+        >
+            <h3 className="text-white text-xs font-medium tracking-[3px]">SCROLL DOWN</h3>
+            <svg className="w-4 h-4 mt-2 mx-auto opacity-90 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+        </motion.div>
     </div>
   );
 }
-
 export default HomePage;
