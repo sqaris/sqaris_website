@@ -35,7 +35,7 @@ const Services = () => {
           background-color: black;
         }
        `}</style>
-        <main className="flex justify-center items-center min-h-screen p-4 sm:p-8">
+        <main className="flex justify-center items-center min-h-screen">
           <ProjectElement />
         </main>
       </div>

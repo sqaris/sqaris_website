@@ -44,13 +44,13 @@ const AboutPage = () => {
           </p>
         </div>
 
-        <div className="flex flex-col items-center justify-center px-4">
+        <div className="flex flex-col items-center justify-center px-4 py-6">
           {/* Mission */}
           <Card
             title="Mission"
             content="Empowering industries with intelligent AI platforms and robotics system through engineering excellence."
           />
-          <div className="h-10" />
+          <div className="h-10 py-6"  />
           {/* Vision */}
           <Card
             title="Vision"
@@ -68,7 +68,7 @@ export default AboutPage;
 function Card({ title, content }) {
   return (
     // UPDATED: max-width changed from 984px to 1320px to match the OurStory component
-    <div className="relative w-full max-w-4xl h-auto md:h-[200px] mx-auto">
+    <div className="relative w-full max-w-4xl h-auto md:h-[200px] mx-auto py-6">
       <div className="absolute inset-0 border border-purple-400 rounded-[28px] backdrop-blur-sm opacity-60" />
       <div className="absolute inset-0 overflow-hidden rounded-[28px]">
         <div
@@ -97,7 +97,7 @@ function Card({ title, content }) {
 
 function OurStory() {
   return (
-    <div className="relative mx-auto mt-10 px-4 sm:px-8 w-full max-w-6xl py-8">
+    <div className="relative mx-auto  px-4 sm:px-8 w-full max-w-6xl py-6 ">
       {/* Sphere positioned at bottom right corner */}
       <div className="hidden md:block absolute -bottom-16 -right-28 z-30">
         <img

@@ -5,11 +5,15 @@ import { InfiniteMovingCards } from "../ui/InfiniteMovingCards";
 
 // Replace with your actual image imports
 import profileimg from "../../assets/image/profileimg.png"
+import bg from "../../assets/image/team/bg.png"
 
 
 export function InfiniteMovingCardsElement() {
   return (
-    <div className="  py-8  flex flex-col antialiased bg-white dark:bg-black  items-center justify-center relative overflow-hidden">
+    <div className="  py-8  flex flex-col antialiased bg-white dark:bg-black  items-center justify-center relative overflow-hidden  bg-cover"
+          style={{
+            backgroundImage: `url(${bg})`,
+          }}>
       <h1 className="text-transparent text-4xl md:text-6xl lg:text-6xl bg-clip-text bg-gradient-to-br to-white from-[#8C45FF] text-center font-bold  leading-[72px] font-raleway mt-50 mb-10">
           OUR TEAM
         </h1>

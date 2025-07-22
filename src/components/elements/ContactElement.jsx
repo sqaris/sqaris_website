@@ -1,4 +1,5 @@
 "use client";
+import { MdLocationCity } from "react-icons/md";
 
 import React, { useState, useEffect } from 'react';
 // Make sure to install react-icons: npm install react-icons
@@ -177,10 +178,10 @@ const ContactElement = () => {
     // Make sure to configure your EmailJS account and add the script to public/index.html
     if (window.emailjs) {
         window.emailjs.send(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
+        'service_hciprkm',
+        'template_sd6qjbb',
         formData,
-        'YOUR_PUBLIC_KEY'
+        'zptWwnTUzqhJIi4Qm'
         ).then((result) => {
             console.log('SUCCESS!', result.text);
             setStatus('Sent successfully!');
@@ -211,7 +212,7 @@ const ContactElement = () => {
         <h2 className="text-2xl font-semibold mb-2">WE'RE HIRING</h2>
         <p className="max-w-lg mx-auto text-[#a9a6b3]">
           Want to create bold impact through design & engineering? Apply to open positions by writing to us at{' '}
-          <a href="mailto:sqaris.gm@gmail.com" className="text-accent font-medium hover:underline">
+          <a href="mailto:sqaris.gm@gmail.com" className="text-accent font-medium hover:underline text-purple-500">
             sqaris.gm@gmail.com
           </a>
         </p>
@@ -249,8 +250,8 @@ const ContactElement = () => {
           </div>
         </div>
         <div className="lg:col-span-2 flex flex-col justify-start gap-8">
-          <div className="grid grid-cols-2 gap-x-8 gap-y-10 text-purple-300">
-            <InfoItem icon={<FaLocationDot />} title="Location" text="SQARIS, Thrissur, Kerala" />
+          <div className="grid grid-cols-2 gap-x-8 gap-y-10  text-purple-300 ">
+            <InfoItem icon={<MdLocationCity />} title="Location" text="SQARIS, Thrissur, Kerala" />
             <InfoItem icon={<FaPhone />} title="Phone" text="+91 9539 378 327" />
             <InfoItem icon={<FaEnvelope />} title="Email" text="sqaris.in@gmail.com" />
             <InfoItem icon={<FaWhatsapp />} title="Whatsapp" text="+91 9539 378 327" />

@@ -133,8 +133,9 @@ const MoreSoonCard = () => (
         <img 
             src={ringImage}
             alt="More positions coming soon" 
-            className="w-36 h-36 animate-ring-3d mb-4"
-            style={{ transformStyle: 'preserve-3d' }}
+            className="w-36 h-36  mb-4"
+            animate={{ y: [-10, 10, -10] }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
         />
         <h3 className="text-xl font-semibold text-white">More soon</h3>
     </motion.div>

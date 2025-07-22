@@ -10,6 +10,7 @@ import {
   FaPhoneAlt,
   FaEnvelope,
 } from "react-icons/fa";
+import { MdLocationCity } from "react-icons/md";
 
 // Your logo is now imported
 import logo from "../../assets/image/footerlogo.png";
@@ -71,22 +72,22 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 text-white">Services</h3>
             <ul className="space-y-3 text-gray-400">
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="" className="hover:text-white">
                   UI/UX Design
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="" className="hover:text-white">
                   Web Development
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="" className="hover:text-white">
                   Mobile App Development
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="" className="hover:text-white">
                   Robotics and Automation
                 </a>
               </li>
@@ -98,27 +99,27 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 text-white">Company</h3>
             <ul className="space-y-3 text-gray-400">
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="#about" className="hover:text-white">
                   About us
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="#services" className="hover:text-white">
                   Our services
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="#services" className="hover:text-white">
                   Our projects
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="#career" className="hover:text-white">
                   Career
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="#contact" className="hover:text-white">
                   Contact us
                 </a>
               </li>
@@ -130,7 +131,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 text-white">Contact</h3>
             <ul className="space-y-3 text-white">
               <li className="flex items-start gap-3">
-                <FaMapMarkerAlt className="text-purple-300 mt-1 flex-shrink-0" />
+                <MdLocationCity className="text-purple-300 mt-1 flex-shrink-0" />
                 <span>Sqaris, Thrissur, Kerala</span>
               </li>
               <li className="flex items-center gap-3">

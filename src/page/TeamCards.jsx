@@ -4,7 +4,7 @@ import { InfiniteMovingCardsElement } from "../components/elements/InfinteMoving
 
 const TeamCards = () => {
   return (
-    <section id="about" className="lg:pt-24  bg-black mt-30">
+    <section id="about" className="  bg-black ">
       {/* <AboutHead />
       <Mission />
       <OurStory /> */}

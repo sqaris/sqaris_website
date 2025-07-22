@@ -10,6 +10,7 @@ import helixImage from "../../assets/image/project/purple-helix.png";
 import titleBg from "../../assets/image/project/project_title_bg.png";
 import descriptionBg from "../../assets/image/project/project_des_bg.png";
 import dia from "../../assets/image/project/holo-diamond.png";
+import bg from "../../assets/image/project/bg.png";
 
 // Animation variants for the details section
 const fadeIn = {
@@ -90,7 +91,10 @@ const ProjectElement = () => {
   };
 
   return (
-    <section className="mx-auto px-4 py-20 w-full text-white">
+    <section className="mx-auto px-4 py-20 w-full text-white bg-cover "
+            style={{
+              backgroundImage: `url(${bg})`,
+            }}>
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <h1

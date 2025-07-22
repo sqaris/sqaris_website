@@ -34,7 +34,7 @@ const HomePage = () => {
 
   return (
     <div
-      className="relative w-full h-screen bg-black text-white overflow-hidden bg-cover"
+      className="relative w-full h-screen  text-white overflow-hidden bg-cover"
       style={{ backgroundImage: `url(${bg})` }}
     >
       {/* Background overlays */}
@@ -51,7 +51,7 @@ const HomePage = () => {
       ></div>
 
       {/* Floating Navbar (Desktop only) */}
-      <div className="hidden md:block z-50">
+      <div className="hidden md:block z-50 ">
         <FloatingNav navItems={navItems} />
       </div>
 

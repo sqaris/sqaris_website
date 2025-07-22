@@ -1,13 +1,12 @@
 "use client";
 
-import React, { JSX, useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   motion,
   AnimatePresence,
   useScroll,
-  useMotionValueEvent,
-} from "framer-motion"; // use framer-motion instead of motion/react
-import { cn } from "../../lib/utils";
+} from "framer-motion";
+import { cn } from "../../lib/utils"; // Assuming you have a utility function for class names
 
 export const FloatingNav = ({
   navItems,
@@ -19,46 +18,79 @@ export const FloatingNav = ({
   }[];
   className?: string;
 }) => {
-  const { scrollYProgress } = useScroll();
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
 
-  useMotionValueEvent(scrollYProgress, "change", (current) => {
-    if (typeof current === "number") {
-      const direction = current - scrollYProgress.getPrevious()!;
-      if (scrollYProgress.get() < 0.05) {
-        setVisible(false);
-      } else {
-        setVisible(direction < 0);
+  useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
+
+    const handleScroll = () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
       }
-    }
-  });
+      
+      if (window.scrollY > 50) {
+          setVisible(true); 
+          timeoutId = setTimeout(() => {
+              setVisible(false);
+          }, 3000);
+      } else {
+          setVisible(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+    };
+  }, []);
+
 
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        initial={{ opacity: 1, y: -100 }}
-        animate={{
-          y: visible ? 0 : -100,
-          opacity: visible ? 1 : 0,
-        }}
-        transition={{ duration: 0.2 }}
-        className={cn(
-          "fixed top-10 left-1/3 -translate-x-1/2 z-50 w-[558px] h-[69px] bg-transparent border border-white/30 backdrop-blur-md rounded-[24px] px-8 py-4 flex items-center justify-center space-x-8", className
+    // This outer div is a full-width container that uses flexbox to center the navbar.
+    <div className="fixed top-8 w-full z-50 flex justify-center">
+        <AnimatePresence mode="wait">
+        {visible && (
+            <motion.div
+                initial={{
+                opacity: 0,
+                y: -100,
+                }}
+                animate={{
+                y: 0,
+                opacity: 1,
+                }}
+                exit={{
+                y: -100,
+                opacity: 0,
+                }}
+                transition={{
+                duration: 0.5,
+                ease: "easeInOut",
+                }}
+                className={cn(
+                "w-auto bg-black/50 border border-white/20 backdrop-blur-md rounded-full px-8 py-4 flex items-center justify-center space-x-8",
+                className
+                )}
+            >
+                <ul className="flex items-center justify-center space-x-8">
+                {navItems.map((item, idx) => (
+                    <li key={`link-${idx}`}>
+                    <a
+                        href={item.link}
+                        className="text-white text-sm font-medium hover:text-purple-300 transition-colors"
+                    >
+                        {item.name}
+                    </a>
+                    </li>
+                ))}
+                </ul>
+            </motion.div>
         )}
-      >
-        <ul className="flex items-center justify-center space-x-8">
-          {navItems.map((item, idx) => (
-            <li key={idx}>
-              <a
-                href={item.link}
-                className="text-white text-sm font-medium hover:text-white/80 transition"
-              >
-                {item.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </motion.div>
-    </AnimatePresence>
+        </AnimatePresence>
+    </div>
   );
 };
