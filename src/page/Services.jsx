@@ -21,8 +21,8 @@ const Services = () => {
           background-size: 50px 50px;
         }
        `}</style>
-        <main className="flex justify-center items-center min-h-screen p-4 sm:p-8 overflow-x-hidden">
-          <ServicesElement />
+        <main className="flex justify-center  items-center min-h-screen p-4 sm:p-8 overflow-x-hidden" >
+          <ServicesElement  />
         </main>
       </div>
       <div className="bg-black">
@@ -35,7 +35,7 @@ const Services = () => {
           background-color: black;
         }
        `}</style>
-        <main className="flex justify-center items-center min-h-screen">
+        <main className="flex justify-center items-center min-h-screen" id="project">
           <ProjectElement />
         </main>
       </div>

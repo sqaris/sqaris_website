@@ -24,7 +24,11 @@ import bg from "../../assets/image/home/bg_home.png";
 const navItems = [
   { name: "Home", link: "#home", icon: <HomeIcon className="w-4 h-4" /> },
   { name: "About", link: "#about", icon: <Info className="w-4 h-4" /> },
-  { name: "Services", link: "#services", icon: <Briefcase className="w-4 h-4" /> },
+  {
+    name: "Services",
+    link: "#services",
+    icon: <Briefcase className="w-4 h-4" />,
+  },
   { name: "Career", link: "#career", icon: <Users className="w-4 h-4" /> },
   { name: "Contact", link: "#contact", icon: <Phone className="w-4 h-4" /> },
 ];
@@ -156,30 +160,33 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* Scroll Down Indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-center z-20"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.2 }}
+      <a
+        href="#about"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 text-center z-20 sm:bottom-8 md:bottom-[42px]"
       >
-        <h3 className="text-white text-xs font-medium tracking-[3px]">
-          SCROLL DOWN
-        </h3>
-        <svg
-          className="w-4 h-4 mt-2 mx-auto opacity-90 animate-bounce"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1.2 }}
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M19 14l-7 7m0 0l-7-7m7 7V3"
-          />
-        </svg>
-      </motion.div>
+          <h3 className="text-white text-[8px] font-medium tracking-[2px] sm:text-[10px] sm:tracking-[3px] md:text-[12px] md:tracking-[5px]">
+            SCROLL DOWN
+          </h3>
+          <svg
+            className="w-4 h-4 mt-2 mx-auto opacity-90 animate-bounce"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
+          </svg>
+        </motion.div>
+      </a>
     </div>
   );
 };
