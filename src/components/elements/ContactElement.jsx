@@ -251,7 +251,7 @@ const ContactElement = () => {
             href="mailto:sqaris.gm@gmail.com"
             className="text-accent font-medium hover:underline text-purple-500"
           >
-            sqaris.gm@gmail.com
+            sqaris.in@gmail.com
           </a>
         </p>
       </div>
