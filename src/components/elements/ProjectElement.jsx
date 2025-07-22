@@ -38,7 +38,7 @@ const projects = [
   },
   {
     title: "Wie Platform",
-    subtitle: "Social Care App – Gov. of Kerala", // Subtitle updated as per image
+    subtitle: "Social media platform – SQARIS", // Subtitle updated as per image
     icon: wieIcon,
     logo: wieIcon,
     description:
