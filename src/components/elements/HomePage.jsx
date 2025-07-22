@@ -139,14 +139,14 @@ const HomePage = () => {
               animate={{ opacity: 1, y: 0, x: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
             />
-            <motion.img
-              src={star}
-              alt="Star"
-              className="absolute md:top-1/2 md:left-3/4 hidden md:block -translate-x-1/4 -translate-y-1/2 w-16 h-16 sm:w-20 sm:h-20"
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              whileHover={{ scale: 1.2, rotate: 45 }}
+            <motion.img 
+              src={star} 
+              alt="Star" 
+              className="absolute md:top-1/2 md:left-[72%] hidden md:block -translate-x-1/4 -translate-y-1/2 w-16 h-16 sm:w-20 sm:h-20" 
+              initial={{ opacity: 0, scale: 0.5 }} 
+              animate={{ opacity: 1, scale: 1 }} 
+              transition={{ duration: 0.8, delay: 0.8 }} 
+              whileHover={{ scale: 1.2, rotate: 45 }} 
             />
             <motion.img
               src={bottomhand}
