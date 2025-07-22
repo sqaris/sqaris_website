@@ -71,26 +71,10 @@ const Footer = () => {
           <div className="hidden lg:block">
             <h3 className="text-lg font-semibold mb-4 text-white">Services</h3>
             <ul className="space-y-3 text-gray-400">
-              <li>
-                <a href="" className="hover:text-white">
-                  UI/UX Design
-                </a>
-              </li>
-              <li>
-                <a href="" className="hover:text-white">
-                  Web Development
-                </a>
-              </li>
-              <li>
-                <a href="" className="hover:text-white">
-                  Mobile App Development
-                </a>
-              </li>
-              <li>
-                <a href="" className="hover:text-white">
-                  Robotics and Automation
-                </a>
-              </li>
+              <li>UI/UX Design</li>
+              <li>Web Development</li>
+              <li>Mobile App Development</li>
+              <li>Robotics and Automation</li>
             </ul>
           </div>
 

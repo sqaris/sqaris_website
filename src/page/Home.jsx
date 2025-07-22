@@ -1,15 +1,13 @@
-import SqarisMissionVision from "../components/elements/AboutPage.jsx";
-import HomeLanding from "../elements/HomeLanding.jsx";
-import { InfiniteMovingCardsElement } from "../components/elements/InfinteMovingCardsElement.jsx";
-import LandingBelow from "../elements/LandingBelow.jsx";
+import HomePage from "../components/elements/HomePage";
+import HomePageBelow from "../components/elements/HomePageBelow";
+
 
 const Home = () => {
   return (
     <section id="home">
-      <HomeLanding />
-      <LandingBelow />
-      <SqarisMissionVision />
-      <InfiniteMovingCardsElement />
+      <HomePage/>
+      <HomePageBelow/>
+
     </section>
   );
 };

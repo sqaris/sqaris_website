@@ -64,17 +64,16 @@ const ProjectSelectorCard = ({ project, isSelected, onClick }) => {
   return (
     <motion.div
       whileHover={{ scale: 1.05 }}
-      // UPDATED: Added text-center to ensure all text inside is centered
-      className="cursor-pointer w-full md:w-80 h-48 flex flex-col justify-center items-center p-5 rounded-2xl border border-[rgba(159,85,255,0.2)] backdrop-blur-sm transition-all duration-300 text-center"
+      className="cursor-pointer w-[150px] sm:w-60 md:w-80 md:h-48 h-36 flex flex-col justify-center items-center p-2 sm:p-5 rounded-2xl border border-[rgba(159,85,255,0.2)] backdrop-blur-sm transition-all duration-300 text-center"
       style={cardStyle}
       onClick={onClick}
     >
       <img
         src={project.icon}
         alt={`${project.title} icon`}
-        className="h-16 mb-3"
+        className="h-8 md:h-16 mb-3"
       />
-      <div className="text-xl font-semibold">{project.title}</div>
+      <div className="text-base md:text-xl font-semibold">{project.title}</div>
       <div className="text-xs text-gray-400">{project.subtitle}</div>
     </motion.div>
   );
@@ -105,7 +104,7 @@ const ProjectElement = () => {
         </h1>
 
         {/* Project Selection Cards */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-4 mb-12">
+        <div className="flex flex-row justify-center items-center gap-2 sm:gap-4 mb-12">
           <ProjectSelectorCard
             project={projects[0]}
             isSelected={selected === 0}
@@ -115,7 +114,7 @@ const ProjectElement = () => {
           <motion.img
             src={helixImage}
             alt="Helix decoration"
-            className="w-24 h-24"
+            className="w-16 h-16 sm:w-24 sm:h-24" // Responsive helix
             animate={{ y: [-10, 10, -10] }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
           />
@@ -139,24 +138,23 @@ const ProjectElement = () => {
           >
             {/* LEFT: Project Description Box */}
             <div
-              className="lg:col-span-3 border border-[rgba(159,85,255,0.2)] rounded-2xl p-8"
+              className="lg:col-span-3 border border-[rgba(159,85,255,0.2)] rounded-2xl p-8 text-left"
               style={descriptionCardStyle}
             >
-              <div className="flex items-center gap-4 mb-4 overflow-hidden">
-                <div className="md:flex py-auto">
-                  <div className="flex pb-2">
+              {/* UPDATED: Restructured this section for better alignment */}
+              <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-4">
+                <div className="flex items-center gap-4">
                     <img
-                      src={project.logo}
-                      alt="Project Logo"
-                      className="h-12"
+                        src={project.logo}
+                        alt="Project Logo"
+                        className="h-12"
                     />
-                    <h3 className="text-2xl px-2 font-bold leading-tight">
-                      {project.title}
+                    <h3 className="text-2xl font-bold leading-tight whitespace-nowrap">
+                        {project.title}
                     </h3>
-                  </div>
-                  <div className="bg-[#2a2a2a] h-full text-gray-300 text-xs px-3 py-1.5 rounded-full whitespace-nowrap">
+                </div>
+                <div className="bg-[#2a2a2a] text-gray-300 text-xs px-3 py-1.5 rounded-full whitespace-nowrap self-start md:self-center">
                     {project.subtitle}
-                  </div>
                 </div>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed">

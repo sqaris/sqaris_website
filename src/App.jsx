@@ -1,39 +1,27 @@
 // App.jsx
 import "./App.css";
-import AboutPage from "./components/elements/AboutPage";
+
 import Footer from "./components/elements/Footer";
 import Career from "./page/Career";
 import Contact from "./page/Contact";
 import Services from "./page/Services";
-import TeamCards from "./page/TeamCards";
-import About from "./page/TeamCards";
-import HomePage from "./page/HomePage";
-import HomePageBelow from "./page/HomePageBelow";
+
+
+
+import Home  from "./page/Home";
+import About  from "./page/About";
 
 function App() {
   return (
-    // <Router>
-    //   <Navbar/>
-    // <Routes>
-    //   <Route path="/" element={<Home />} />
-    //   <Route path="/home" element={<HomePage/>} />
-    //   <Route path="/about" element={<About />} />
-    //   <Route path="/services" element={<Services />} />
-    //   <Route path="/career" element={<CarrerNew/>} />
-    //   <Route path="/contact" element={<Contact/>} />
-
-    // </Routes>
-    // <Footer/>
-    // </Router>
     <>
       <>
         <div id="home">
-          <HomePage />
+          <Home/>
         </div>
-        <HomePageBelow />
+
         <div id="about">
-          <AboutPage />
-          <TeamCards />
+          <About/>
+
         </div>
         <div id="services">
           <Services />
@@ -47,7 +35,7 @@ function App() {
         <Footer />
       </>
     </>
-    // <CarrerNew/>
+  
   );
 }
 

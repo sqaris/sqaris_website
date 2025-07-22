@@ -3,9 +3,9 @@
 import React from 'react';
 
 // STEP 1: Import your images here
- import sphere from '../../assets/image/holo-sphere.png';
- import book from '../../assets/image/ourstory_book.png';
- import bgImage from '../../assets/image/aboutbg.png';
+ import sphere from '../../assets/image/about/holo-sphere.png';
+ import book from '../../assets/image/about/ourstory_book.png';
+ import bgImage from '../../assets/image/about/bg.png';
 
 
 const AboutPage = () => {

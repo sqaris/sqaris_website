@@ -104,7 +104,7 @@ const ServicesElement = () => {
             >
               <div className="flex items-center gap-4">
                 <DiamondIcon />
-                <h3 className="font-medium text-xl   text-white">{service.title}</h3>
+                <h3 className=" md:text-xl text-lg   text-white">{service.title}</h3>
               </div>
        {/*       <div className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-white/40">
                 <svg
